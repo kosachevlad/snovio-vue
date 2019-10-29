@@ -1,0 +1,20 @@
+// modules
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+@import "modules/normalize.scss";
+
+// components
+@import "components/sidebar.scss";
+@import "components/content.scss";
+@import "components/header.scss";
+@import "components/content/post-card.scss";
+@import "components/modal.scss";
+
+.main{
+    display: flex;
+}
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active до версии 2.1.8 */ {
+opacity: 0;
+}

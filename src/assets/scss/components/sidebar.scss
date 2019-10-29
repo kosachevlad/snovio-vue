@@ -1,0 +1,90 @@
+.sidebar{
+    min-height: 100vh;
+    background: #21523D;
+    min-width: 244px;
+    position: fixed;
+    .sidebar__head{
+        padding-top: 32px;
+        .logo{
+            display: block;
+            margin: 0 auto;
+        }
+        @media (max-width: 768px) {
+            padding-top: 20px;
+            .logo{
+                width: 40px;
+            }
+        }
+    }
+    .sidebar__nav{
+        margin-top: 42px;
+        .sidebar__title{
+            color: #fff;
+            text-transform: uppercase;
+            margin-left: 30px;
+            font-size: 14px;
+            @media (max-width: 768px){
+                display: none;
+            }
+        }
+        ul{
+            margin-top: 26px;
+        }
+        li{
+            display: flex;
+            align-items: center;
+            height: 48px;
+            position: relative;
+            padding-left: 30px;
+            padding-right: 30px;
+            font-size: 14px;
+            color: #fff;
+            transition: background 0.5s ease;
+            margin-bottom: 2px;
+            @media (max-width: 768px) {
+                padding: 0;
+            }
+            cursor: pointer;
+            &:before{
+                opacity: 0;
+                transition: opacity 0.5s ease;
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 48px;
+                width: 4px;
+                background: #26CF88;
+            }
+            &.active{
+                background: #225740;
+                &:before{
+                    opacity: 1;
+                }
+            }
+            span{
+                @media (max-width: 768px) {
+                    display: none;
+                }
+            }
+            img{
+                @media (max-width: 768px) {
+                    margin: 0 auto;
+                }
+                width: 30px;
+                height: 30px;
+                border-radius: 50px;
+                margin-right: 10px;
+            }
+            &:hover{
+                background: #225740;
+                &:before{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    @media (max-width: 768px) {
+        min-width: 53px;	    
+    }
+}
